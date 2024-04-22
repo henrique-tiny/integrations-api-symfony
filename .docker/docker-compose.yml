@@ -1,0 +1,54 @@
+services:
+  # FPM
+  php_fpm:
+    build:
+      context: ./fpm
+    volumes:
+      - ./fpm/www-fpm.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ./fpm/zz-docker.conf:/usr/local/etc/php-fpm.d/zz-docker.conf
+      - ../:/var/www
+    ports:
+      - 3001:3001
+    networks:
+      - integration_api
+
+  nginx_fpm:
+    image: nginx:latest
+    volumes:
+      - ./fpm/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 9001:9001
+    networks:
+      - integration_api
+
+  # Swoole
+  # php_swoole:
+  #   build:
+  #     context: ./swoole
+  #   extra_hosts:
+  #     - "host.docker.internal:host-gateway"
+  #   volumes:
+  #     - ../:/var/www
+  #     - ./logs:/var/log
+  #   environment:
+  #     - APP_RUNTIME:"Runtime\\Swoole\\Runtime"
+  #   ports:
+  #     - 3002:3002
+  #   networks:
+  #     - integration_api
+
+  # nginx_swoole:
+  #   image: nginx:latest
+  #   volumes:
+  #     - ./swoole/nginx.conf:/etc/nginx/nginx.conf:ro
+  #   ports:
+  #     - 9002:9002
+  #   networks:
+  #     - integration_api
+
+secrets:
+  composer_auth:
+    file: ../auth.json
+
+networks:
+  integration_api:

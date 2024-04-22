@@ -1,0 +1,5 @@
+controllers:
+    resource:
+        path: ../src/Infrastructure/Framework/Http/Router/
+        namespace: App\Infrastructure\Framework\Http\Router
+    type: attribute

@@ -1,0 +1,20 @@
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+
+###< symfony/framework-bundle ###
+/.docker/.env.nginx.local
+auth.json
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+.docker/.env
+
+.vscode/launch.json
+
