@@ -4,7 +4,7 @@ use App\Kernel;
 
 $_SERVER['APP_RUNTIME_OPTIONS'] = [
     'host' => 'localhost',
-    'port' => 3001,
+    'port' => 3002,
     'mode' => SWOOLE_BASE,
     'settings' => [
         \Swoole\Constant::OPTION_WORKER_NUM => 50,
@@ -16,10 +16,5 @@ $_SERVER['APP_RUNTIME_OPTIONS'] = [
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
 
 return function (array $context) {
-    try {
-        return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
-    } catch (\Throwable $t) {
-        echo $t->getMessage(), "\n";
-        while(true) {}
-    }
+    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
 };

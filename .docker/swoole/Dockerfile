@@ -20,6 +20,8 @@ RUN docker-php-ext-enable swoole
 RUN docker-php-ext-install \
     zip opcache mbstring
 
+ENV APP_RUNTIME="Runtime\\Swoole\\Runtime"
+
 WORKDIR /var/www
 
 CMD ["php", "./public/swoole.php"]

@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     acl
 
-RUN pecl install pcntl sockets swoole
-RUN docker-php-ext-enable swoole
+# RUN pecl install pcntl sockets swoole
+# RUN docker-php-ext-enable swoole
 
 RUN docker-php-ext-install \
     zip opcache mbstring
