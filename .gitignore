@@ -18,3 +18,9 @@ auth.json
 
 .vscode/launch.json
 
+## outros
+post_test_shopify.json
+
+###> baldinof/roadrunner-bundle ###
+/bin/rr
+###< baldinof/roadrunner-bundle ###

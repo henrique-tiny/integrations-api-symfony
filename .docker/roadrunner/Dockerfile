@@ -17,4 +17,6 @@ RUN apt-get update && apt-get install -y \
 RUN docker-php-ext-install \
     zip opcache mbstring
 
-WORKDIR /var/www/public
+WORKDIR /var/www
+
+CMD ["./bin/rr", "serve"]
