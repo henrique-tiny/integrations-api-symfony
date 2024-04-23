@@ -8,8 +8,11 @@ server:
 http:
   address: 0.0.0.0:9003
   pool:
-    debug: true
+    debug: false
     num_workers: 50
+    # supervisor:
+    #   max_memory_worker: 128
+
   middleware: [ "static", "gzip" ]
   uploads:
     forbid: [ ".php", ".exe", ".bat" ]
@@ -27,6 +30,9 @@ logs:
       mode: raw
     metrics:
       level: error
+
+rpc:
+  listen: tcp://127.0.0.1:6001
 
 # Uncomment to use metrics integration
 # rpc:

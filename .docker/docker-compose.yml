@@ -56,6 +56,19 @@ services:
     networks:
       - integration_api
 
+  # Nginx Unit
+  php_nginx_unit:
+    build:
+      context: ../
+      dockerfile: .docker/nginx-unit/Dockerfile
+    volumes:
+      - ../:/var/www
+      - ./logs:/var/log
+    ports:
+      - 9004:9004
+    networks:
+      - integration_api
+
 secrets:
   composer_auth:
     file: ../auth.json
