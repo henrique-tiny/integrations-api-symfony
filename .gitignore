@@ -20,6 +20,7 @@ auth.json
 
 ## outros
 post_test_shopify.json
+auth-github-local.txt
 
 ###> baldinof/roadrunner-bundle ###
 /bin/rr
