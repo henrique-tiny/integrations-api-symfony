@@ -15,6 +15,7 @@ auth.json
 ###< phpunit/phpunit ###
 
 .docker/.env
+.docker/logs/*
 
 .vscode/launch.json
 
