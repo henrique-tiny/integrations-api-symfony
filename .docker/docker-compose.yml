@@ -2,7 +2,8 @@ services:
   # FPM
   php_fpm:
     build:
-      context: ./fpm
+      context: ../
+      dockerfile: .docker/fpm/Dockerfile
     volumes:
       - ./fpm/www-fpm.conf:/usr/local/etc/php-fpm.d/www.conf
       - ./fpm/zz-docker.conf:/usr/local/etc/php-fpm.d/zz-docker.conf
@@ -22,7 +23,8 @@ services:
   # Swoole
   php_swoole:
     build:
-      context: ./swoole
+      context: ../
+      dockerfile: .docker/swoole/Dockerfile
     volumes:
       - ../:/var/www
       - ./logs:/var/log
@@ -43,8 +45,10 @@ services:
   # Road Runner
   php_roadrunner:
     build:
-      context: ./roadrunner
+      context: ../
+      dockerfile: .docker/roadrunner/Dockerfile
     volumes:
+      - docker_roadrunner_bin:/var/www/bin-roadrunner
       - ../:/var/www
       - ./logs:/var/log
     ports:
@@ -58,3 +62,6 @@ secrets:
 
 networks:
   integration_api:
+
+volumes:
+  docker_roadrunner_bin:

@@ -1,6 +1,6 @@
 FROM php:8.3-fpm
 
-COPY php.ini /usr/local/etc/php/conf.d/docker-php-config.ini
+COPY .docker/fpm/php.ini /usr/local/etc/php/conf.d/docker-php-config.ini
 
 RUN apt-get update && apt-get install -y \
     procps \

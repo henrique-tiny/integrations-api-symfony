@@ -1,6 +1,6 @@
 FROM php:8.3-cli
 
-COPY php.ini /usr/local/etc/php/conf.d/docker-php-config.ini
+COPY .docker/swoole/php.ini /usr/local/etc/php/conf.d/docker-php-config.ini
 
 RUN apt-get update && apt-get install -y \
     procps \

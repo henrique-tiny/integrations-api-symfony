@@ -1,6 +1,6 @@
-FROM php:8.3-fpm
+FROM php:8.3-cli
 
-COPY php.ini /usr/local/etc/php/conf.d/docker-php-config.ini
+COPY .docker/roadrunner/php.ini /usr/local/etc/php/conf.d/docker-php-config.ini
 
 RUN apt-get update && apt-get install -y \
     procps \
@@ -19,4 +19,7 @@ RUN docker-php-ext-install \
 
 WORKDIR /var/www
 
-CMD ["./bin/rr", "serve"]
+COPY ./vendor ./vendor
+RUN mkdir /var/www/bin-roadrunner && ./vendor/bin/rr get --location /var/www/bin-roadrunner
+
+CMD ["/var/www/bin-roadrunner/rr", "serve"]
