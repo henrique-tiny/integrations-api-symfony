@@ -14,6 +14,8 @@ return function(ContainerConfigurator $container): void {
     // this creates a service per class whose id is the fully-qualified class name
     $services
         ->load('App\\', '../src/')
+        // share: false somente para Swoole, RoadRunner, Franken
+        // nginx+fpm ou nginx unit, não é necessário
 		->share(false) // se isso n for setado, fudeu, pq ele vai reusar as instâncias entre requests
 		->exclude('../src/{DependencyInjection,Entity,Kernel.php}')
     ;
