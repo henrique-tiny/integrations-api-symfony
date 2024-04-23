@@ -7,7 +7,7 @@ $_SERVER['APP_RUNTIME_OPTIONS'] = [
     'port' => 3002,
     'mode' => SWOOLE_BASE,
     'settings' => [
-        \Swoole\Constant::OPTION_WORKER_NUM => 50,
+        \Swoole\Constant::OPTION_WORKER_NUM => 10,
         \Swoole\Constant::OPTION_ENABLE_STATIC_HANDLER => true,
         \Swoole\Constant::OPTION_DOCUMENT_ROOT => dirname(__DIR__).'/public'
     ],

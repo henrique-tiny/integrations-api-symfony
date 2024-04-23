@@ -1,0 +1,230 @@
+➜  /home/tinysoftware/Documentos/projetos/integrations-api-symfony git:(master) ✗ ab -p post_test_shopify.json -T application/json -c 50 -n 2000 http://localhost:9001/api/v1/31/auth/verify
+This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 200 requests
+Completed 400 requests
+Completed 600 requests
+Completed 800 requests
+Completed 1000 requests
+Completed 1200 requests
+Completed 1400 requests
+Completed 1600 requests
+Completed 1800 requests
+Completed 2000 requests
+Finished 2000 requests
+
+
+Server Software:        nginx/1.25.4
+Server Hostname:        localhost
+Server Port:            9001
+
+Document Path:          /api/v1/31/auth/verify
+Document Length:        20 bytes
+
+Concurrency Level:      50
+Time taken for tests:   203.301 seconds
+Complete requests:      2000
+Failed requests:        0
+Total transferred:      538000 bytes
+Total body sent:        518000
+HTML transferred:       40000 bytes
+Requests per second:    9.84 [#/sec] (mean)
+Time per request:       5082.529 [ms] (mean)
+Time per request:       101.651 [ms] (mean, across all concurrent requests)
+Transfer rate:          2.58 [Kbytes/sec] received
+                        2.49 kb/s sent
+                        5.07 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0       4
+Processing:  1031 5000 393.9   5051    5096
+Waiting:     1031 5000 393.9   5051    5096
+Total:       1033 5000 393.6   5051    5096
+
+Percentage of the requests served within a certain time (ms)
+  50%   5051
+  66%   5053
+  75%   5054
+  80%   5055
+  90%   5058
+  95%   5061
+  98%   5064
+  99%   5086
+ 100%   5096 (longest request)
+➜  /home/tinysoftware/Documentos/projetos/integrations-api-symfony git:(master) ✗ ab -p post_test_shopify.json -T application/json -c 50 -n 2000 http://localhost:9002/api/v1/31/auth/verify
+This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 200 requests
+Completed 400 requests
+Completed 600 requests
+Completed 800 requests
+Completed 1000 requests
+Completed 1200 requests
+Completed 1400 requests
+Completed 1600 requests
+Completed 1800 requests
+Completed 2000 requests
+Finished 2000 requests
+
+
+Server Software:        nginx/1.25.4
+Server Hostname:        localhost
+Server Port:            9002
+
+Document Path:          /api/v1/31/auth/verify
+Document Length:        20 bytes
+
+Concurrency Level:      50
+Time taken for tests:   208.475 seconds
+Complete requests:      2000
+Failed requests:        0
+Total transferred:      528000 bytes
+Total body sent:        518000
+HTML transferred:       40000 bytes
+Requests per second:    9.59 [#/sec] (mean)
+Time per request:       5211.864 [ms] (mean)
+Time per request:       104.237 [ms] (mean, across all concurrent requests)
+Transfer rate:          2.47 [Kbytes/sec] received
+                        2.43 kb/s sent
+                        4.90 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0       3
+Processing:  1002 4984 3685.7   4005   23149
+Waiting:     1002 4984 3685.7   4005   23149
+Total:       1002 4984 3685.8   4005   23151
+
+Percentage of the requests served within a certain time (ms)
+  50%   4005
+  66%   5901
+  75%   6973
+  80%   7869
+  90%  10014
+  95%  12913
+  98%  15915
+  99%  17143
+ 100%  23151 (longest request)
+➜  /home/tinysoftware/Documentos/projetos/integrations-api-symfony git:(master) ✗ ab -p post_test_shopify.json -T application/json -c 50 -n 2000 http://localhost:9003/api/v1/31/auth/verify
+This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 200 requests
+Completed 400 requests
+Completed 600 requests
+Completed 800 requests
+Completed 1000 requests
+Completed 1200 requests
+Completed 1400 requests
+Completed 1600 requests
+Completed 1800 requests
+Completed 2000 requests
+Finished 2000 requests
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            9003
+
+Document Path:          /api/v1/31/auth/verify
+Document Length:        20 bytes
+
+Concurrency Level:      50
+Time taken for tests:   201.423 seconds
+Complete requests:      2000
+Failed requests:        0
+Total transferred:      452000 bytes
+Total body sent:        518000
+HTML transferred:       40000 bytes
+Requests per second:    9.93 [#/sec] (mean)
+Time per request:       5035.577 [ms] (mean)
+Time per request:       100.712 [ms] (mean, across all concurrent requests)
+Transfer rate:          2.19 [Kbytes/sec] received
+                        2.51 kb/s sent
+                        4.70 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0       3
+Processing:  1010 4957 387.2   5008    5081
+Waiting:     1010 4957 387.2   5007    5081
+Total:       1013 4957 387.0   5008    5083
+
+Percentage of the requests served within a certain time (ms)
+  50%   5008
+  66%   5008
+  75%   5008
+  80%   5008
+  90%   5009
+  95%   5010
+  98%   5012
+  99%   5015
+ 100%   5083 (longest request)
+➜  /home/tinysoftware/Documentos/projetos/integrations-api-symfony git:(master) ✗ ab -p post_test_shopify.json -T application/json -c 50 -n 2000 http://localhost:9004/api/v1/31/auth/verify
+This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 200 requests
+Completed 400 requests
+Completed 600 requests
+Completed 800 requests
+Completed 1000 requests
+Completed 1200 requests
+Completed 1400 requests
+Completed 1600 requests
+Completed 1800 requests
+Completed 2000 requests
+Finished 2000 requests
+
+
+Server Software:        Unit/1.32.1
+Server Hostname:        localhost
+Server Port:            9004
+
+Document Path:          /api/v1/31/auth/verify
+Document Length:        20 bytes
+
+Concurrency Level:      50
+Time taken for tests:   203.703 seconds
+Complete requests:      2000
+Failed requests:        0
+Total transferred:      500000 bytes
+Total body sent:        518000
+HTML transferred:       40000 bytes
+Requests per second:    9.82 [#/sec] (mean)
+Time per request:       5092.578 [ms] (mean)
+Time per request:       101.852 [ms] (mean, across all concurrent requests)
+Transfer rate:          2.40 [Kbytes/sec] received
+                        2.48 kb/s sent
+                        4.88 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0       4
+Processing:  1034 5006 394.0   5060    5097
+Waiting:     1034 5006 394.0   5059    5097
+Total:       1037 5006 393.7   5060    5098
+
+Percentage of the requests served within a certain time (ms)
+  50%   5060
+  66%   5062
+  75%   5064
+  80%   5065
+  90%   5067
+  95%   5071
+  98%   5075
+  99%   5079
+ 100%   5098 (longest request)
+➜  /home/tinysoftware/Documentos/projetos/integrations-api-symfony git:(master) ✗ 
+

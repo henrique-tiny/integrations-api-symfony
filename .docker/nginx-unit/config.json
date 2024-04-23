@@ -40,8 +40,8 @@
                 }
             },
             "processes": {
-                "max": 50,
-                "spare": 50
+                "max": 10,
+                "spare": 10
             }
         }
     }
