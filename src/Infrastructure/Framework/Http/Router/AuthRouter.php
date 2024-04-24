@@ -12,11 +12,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AuthRouter extends AbstractController {
 
-    #[Route(path: "/phpinfo", methods: ["GET"], env: 'dev')]
-	public function phpinfo() {
-		phpinfo();
-	}
-    
 	#[Route(path: "/api/v1/{platformRef}/auth/verify", methods: ["POST"], format: "json")]
     public function verify(
         AuthController $authController,
