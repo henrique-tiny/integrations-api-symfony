@@ -69,6 +69,21 @@ services:
     networks:
       - integration_api
 
+  # Franken
+  php_frankenphp:
+    build:
+      context: ../
+      dockerfile: .docker/frankenphp/Dockerfile
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+      - ../:/var/www
+      - ./logs:/var/log
+    ports:
+      - 9005:80
+    networks:
+      - integration_api
+
 secrets:
   composer_auth:
     file: ../auth.json
@@ -78,3 +93,6 @@ networks:
 
 volumes:
   docker_roadrunner_bin:
+  caddy_data:
+  caddy_config:
+
